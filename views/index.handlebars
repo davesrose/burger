@@ -1,0 +1,63 @@
+<div class="wrapper">
+	<div class="header"><div class="containerHeader"><div class="logo"></div><span>Farm Fresh Gourmet Burgers</span></div></div>
+	<div class="body"><div class="containerBody">
+
+		<div class="h1"><img src="assets/img/food.gif" width="200"><h1>Order and Eat Da-Burger</h1><div class="desc">Hover over burger for description</div><div style="clear: left;"></div></div>
+		
+		<div class="flexContainer">
+			<div class="flex1"></div>
+			<div class="notDevouredColumn flex2">
+				<h2>Burgers not Eaten</h2>
+				{{#each burger}}
+				{{#unless this.devoured}}
+				<form action="/{{this.id}}?_method=PUT" method="POST">
+					<div class="notEatenField">
+						<span class="foodName">{{this.burger_name}}</span>
+						<div class="foodDescription">{{this.description}}{{#unless this.description}}No Description{{/unless}}</div>
+						<input type="hidden" name="devoured" value="true">
+						<span><button type="submit" >EAT!</button></span>
+					</div>
+				</form>
+				{{/unless}}
+				{{/each}}
+			</div>
+		
+			<div class="DevouredColumn flex3">
+				<h2>Burgers Eaten</h2>
+				{{#each burger}}
+				{{#if this.devoured}}
+				<div class="EatenField">
+					<span class="foodName">{{this.burger_name}}</span>
+					<div class="foodDescription">{{this.description}}{{#unless this.description}}No Description{{/unless}}</div>
+				</div>
+				{{/if}}
+				{{/each}}
+			</div>
+			<div class="flex4"></div>
+		</div>
+
+
+		<div class="submitBurger">
+			<form action="/" method="POST">
+				<p>Enter a burger name you want to eat and click the "Submit" button.</p>
+				<input type="text" class="enterBurger" name="burger_name" id="burgerName">
+				<button type="submit" id="submitButton"><i class="fa fa-cutlery" aria-hidden="true"></i>Submit</button>
+				<p>Enter a description (Optional, but we might chose to include it in our menu!).</p>
+				<textarea id="enterBurgerDescription" name="description"></textarea>
+			</form>
+		</div>	
+
+	</div></div>
+	<div class="footer"><div class="containerFooter">&copy;2017 | Burger Farm&nbsp;&nbsp;&nbsp;</div></div>
+</div>
+<script type="text/javascript">
+	$(".foodDescription").hide();
+	$(".foodName").on({
+		mouseenter: function() {
+			$(this).next($(".foodDescription")).fadeIn("slow");
+		},
+		mouseout: function() {
+			$(this).next($(".foodDescription")).fadeOut("slow");
+		}
+	});
+</script>

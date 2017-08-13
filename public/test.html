@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order Page | Burger Farm</title>
+	<link rel="icon" href="favicon.png" type="image/x-icon"/>
+	<script src="https://use.fontawesome.com/ae85989865.js"></script>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Basic|Pragati+Narrow|Ubuntu+Condensed" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header"><div class="containerHeader"><div class="logo"></div><span>Farm Fresh Gourmet Burgers</span></div></div>
+	<div class="body"><div class="containerBody">
+
+		<div class="h1"><img src="assets/img/food.gif" width="200"><h1>Order and Eat Da-Burger</h1><div class="desc">Hover over burger for description</div><div style="clear: left;"></div></div>
+		
+		<div class="flexContainer">
+			<div class="flex1"></div>
+			<div class="notDevouredColumn flex2">
+				<h2>Burgers not Eaten</h2>
+				<form method="POST" action="/burgers/update?_method=PUT" class="button-size">
+					<div class="notEatenField">
+						<span class="foodName">Black and Blue</span>
+						<div class="foodDescription">A hearty 3/4lb beef patty topped with blue-cheese supplied by Ben's Dairy Farm.  Drizzled with buffalo sauce (you pick your level of hotness).</div>
+						<span><button type="submit">EAT!</button></span>
+					</div>
+				</form>
+			</div>
+		
+			<div class="DevouredColumn flex3">
+				<h2>Burgers Eaten</h2>
+				<div class="EatenField">
+					<span class="foodName">Classic Cheesburger</span>
+					<div class="foodDescription">Two grass fed beef paties with American style cheese from our local suplier, Ben's Dairy Farm.  All served on a daily made bread and homemade ketchup.</div>
+				</div>
+			</div>
+			<div class="flex4"></div>
+		</div>
+
+
+		<div class="submitBurger">
+			<form action="/burgers/create" method="POST">
+				<p>Enter a burger name you want to eat and click the "Submit" button.</p>
+				<input type="text" class="enterBurger" name="burgerName" id="burgerName">
+				<button type="submit" id="submitButton"><i class="fa fa-cutlery" aria-hidden="true"></i>Submit</button>
+				<p>Enter a description (Optional, but we might chose to include it in our menu!).</p>
+				<textarea id="enterBurgerDescription"></textarea>
+			</form>
+		</div>	
+
+	</div></div>
+	<div class="footer"><div class="containerFooter">&copy;2017 | Burger Farm&nbsp;&nbsp;&nbsp;</div></div>
+</div>
+<script type="text/javascript">
+	$(".foodDescription").hide();
+	$(".foodName").on({
+		mouseenter: function() {
+			$(this).next($(".foodDescription")).fadeIn("slow");
+		},
+		mouseout: function() {
+			$(this).next($(".foodDescription")).fadeOut("slow");
+		}
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+html {
+	height: 100%;
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eae670+0,efefb3+100 */
+	background: rgb(234,230,112); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(234,230,112,1) 0%, rgba(239,239,179,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(234,230,112,1) 0%,rgba(239,239,179,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(234,230,112,1) 0%,rgba(239,239,179,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eae670', endColorstr='#efefb3',GradientType=0 ); /* IE6-9 */
+	color: #874605;
+}
+.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+.header {
+	width: 100%;
+	background-color: #ef861c;
+	border-bottom: solid 2px yellow;	
+}
+.header .containerHeader {
+	padding-top: 15px;
+	max-width: 980px;
+	margin: 0 auto;
+}
+.containerHeader span {
+	color: yellow;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 28px;
+	width: 300px;
+	margin-top: -50px;
+	float: right;
+}
+.header .logo {
+	height: 60px;
+	width: 450px;
+	background: url("../img/logo.gif");
+}
+.body {
+	padding-bottom: 50px;
+}
+.containerBody {
+	max-width: 980px;
+	margin: 0 auto;
+}
+.h1 {
+	position: relative;
+	padding-top: 5px;
+	width: 550px;
+	margin: 0 auto;
+}
+.h1 img {
+	float: left;
+}
+.h1 h1 {
+	font-family: 'Basic', sans-serif;
+	font-size: 32px;
+	margin-top: 45px;
+	float: left;
+}
+.desc {
+	position: absolute;
+	left: 250px;
+	top: 85px;
+	font-family: 'Pragati Narrow', sans-serif;
+	font-size: 20px;
+}
+.footer {
+	color: yellow;
+	padding-top: 10px;
+	height: 40px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 18px;
+	background-color: #ef861c;
+	border-top: solid 2px yellow;
+}
+.containerFooter {
+	max-width: 980px;
+	margin: 0 auto;
+	text-align: right;
+}
+.submitBurger {
+	font-family: 'Pragati Narrow', sans-serif;
+	font-size: 18px;
+	width: 460px;
+	margin: 10px auto;
+}
+.submitBurger p {
+	margin-bottom: -3px;
+	margin-top: 0px;
+}
+#submitButton {
+	background-color: #ef861c;
+	color: #f2f280;
+	font-size: 19px;
+	padding: 5px 12px;
+	border-radius: 8px;
+	margin-left: 5px;
+}
+#submitButton i {
+	margin-right: 8px;
+}
+#burgerName {
+	width: 270px;
+	padding: 5px 0px;
+}
+#enterBurgerDescription {
+	width: 370px;
+	height: 40px;
+}
+.flexContainer {
+	display: flex;
+}
+.flex1, .flex4 {
+	flex: initial;
+	width: 100px;
+	min-width: 0px;
+}
+.flex2, .flex3 {
+	flex: 1;
+}
+.notDevouredColumn {
+	margin-top: 20px
+	margin-bottom: 15px;
+	padding: 20px;
+}
+.notEatenField {
+	position: relative;
+	height: 80px;
+}
+.EatenField {
+	position: relative;
+	height: 80px;
+}
+.notEatenField button {
+	background-color: #ef861c;
+	border-radius: 8px;
+	color: yellow;
+	font-family: 'Basic', sans-serif;
+	font-size: 18px;
+}
+.foodName {
+	padding: 15px 10px;
+	border-radius: 10px;
+	border: solid 2px #ef861c;
+	font-family: 'Basic', sans-serif;
+	font-size: 25px;
+}
+.DevouredColumn .foodName {
+	padding: 10px;
+	background-color: rgba(200,200,200,0.8);
+}
+.foodDescription {
+	position: absolute;
+	bottom: 70px;
+	left: 25px;
+	width: 270px;
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 10px;
+	border: solid 1px #ef861c;
+	box-shadow: 6px 6px 10px #444;
+
+}
+.DevouredColumn {
+	margin-top: 20px
+	margin-bottom: 15px;
+	margin-left: 40px;
+	padding: 20px;
+}
+.DevouredColumn h2 {
+	text-align: center;
+	font-family: 'Basic', sans-serif;
+	font-size: 24px;
+}
+.notDevouredColumn h2 {
+	text-align: center;
+	font-family: 'Basic', sans-serif;
+	font-size: 24px;
+}
+.leftSpacer {
+	float: left;
+	max-width: 200px;
+	height: 60px;
+}
+.rightSpacer {
+	float: left;
+	max-width: 200px;
+	height: 60px;
+}
