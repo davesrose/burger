@@ -1,21 +1,14 @@
-var mysql = require("mysql");
+var mysql = require("mysql"); //require mysql package
 
-var connection;
-// var connection = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   port: 3306,
-//   password: "dsravi12",
-//   database: "burgers_db"
-// });
+var connection; //create connection variable
 
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-  connection.query("SELECT 1 + 1 AS solution", function(err, rows, fields) {
+if (process.env.JAWSDB_URL) { //if using JAWSDB on heroku, 
+  connection = mysql.createConnection(process.env.JAWSDB_URL); //create connection with JAWSDB
+  connection.query("SELECT 1 + 1 AS solution", function(err, rows, fields) { //query the connection
     if(err)throw err;
     console.log("The solution is: ", rows[0].solution);
   })
-} else {
+} else { //else connection is local, set localhost connection
   connection = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -25,7 +18,7 @@ if (process.env.JAWSDB_URL) {
   });  
 }
 
-connection.connect(function(err) {
+connection.connect(function(err) { //
   if (err) {
     console.error("error connecting: " + err.stack);
     return;
