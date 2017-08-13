@@ -4,7 +4,7 @@ I've followed the homework instructions, including adding a timestamp when a bur
 
 Live website can be found here:
 
-![https://davesrose-food.herokuapp.com/](https://davesrose-food.herokuapp.com/)
+[https://davesrose-food.herokuapp.com/](https://davesrose-food.herokuapp.com/)
 
 
 ## File structure used:
