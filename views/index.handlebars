@@ -12,7 +12,7 @@
 				{{#unless this.devoured}}
 				<form action="/{{this.id}}?_method=PUT" method="POST">
 					<div class="notEatenField">
-						<span class="foodName">{{this.burger_name}}</span>
+						<span class="foodName">{{this.burger_name}}{{#unless this.burger_name}}Classic Cheeseburger{{/unless}}</span>
 						<div class="foodDescription">{{this.description}}{{#unless this.description}}No Description{{/unless}}</div>
 						<input type="hidden" name="devoured" value="true">
 						<span><button type="submit" >EAT!</button></span>
@@ -27,7 +27,7 @@
 				{{#each burger}}
 				{{#if this.devoured}}
 				<div class="EatenField">
-					<span class="foodName">{{this.burger_name}}</span>
+					<span class="foodName">{{this.burger_name}}{{#unless this.burger_name}}Classic Cheeseburger{{/unless}}</span>
 					<div class="foodDescription">{{this.description}}{{#unless this.description}}No Description{{/unless}}</div>
 				</div>
 				{{/if}}
