@@ -10,7 +10,11 @@ var connection;
 // });
 
 if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL)
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+  connection.query("SELECT 1 + 1 AS solution", function(err, rows, fields) {
+    if(err)throw err;
+    console.log("The solution is: ", rows[0].solution);
+  })
 } else {
   connection = mysql.createConnection({
     host: "localhost",
