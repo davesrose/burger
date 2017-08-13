@@ -1,7 +1,7 @@
 -- Create the database burgers_db and specified it for use.
 CREATE DATABASE burgers_db;
 USE burgers_db;
-
+-- USE pprprjzxptc02snn;
 -- Create the table burgers.
 CREATE TABLE burgers (
 	id int NOT NULL AUTO_INCREMENT,
