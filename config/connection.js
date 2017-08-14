@@ -18,7 +18,7 @@ if (process.env.JAWSDB_URL) { //if using JAWSDB on heroku,
   });  
 }
 
-connection.connect(function(err) { //
+connection.connect(function(err) { //console.log connection
   if (err) {
     console.error("error connecting: " + err.stack);
     return;
@@ -28,4 +28,4 @@ connection.connect(function(err) { //
 
 });
 
-module.exports = connection;
+module.exports = connection; //export connection (to config\ORM)
